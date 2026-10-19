@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanics - Abyssal Escape Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: {
+                            deep: '#0a0612',
+                            purple: '#1a0a2e',
+                            mid: '#2d1b4e',
+                            glow: '#6b21a8',
+                            accent: '#a855f7',
+                            light: '#c084fc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: linear-gradient(180deg, #0a0612 0%, #1a0a2e 50%, #0a0612 100%);
+        }
+        .pixel-border {
+            box-shadow:
+                0 0 0 4px #1a0a2e,
+                0 0 0 8px #2d1b4e,
+                0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px #a855f7, 0 0 20px #6b21a8;
+        }
+        .pixel-art-bg {
+            background-image:
+                linear-gradient(rgba(107, 33, 168, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(107, 33, 168, 0.1) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .stat-bar {
+            background: linear-gradient(90deg, #6b21a8, #a855f7);
+        }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen pixel-art-bg">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-abyss-deep/90 backdrop-blur-sm border-b-4 border-abyss-mid">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-abyss-light font-bold text-sm tracking-wider hover:text-white transition-colors">
+                ABYSSAL ESCAPE
+            </a>
+            <div class="flex gap-6 text-xs">
+                <a href="index.html" class="text-gray-400 hover:text-abyss-accent transition-colors">HOME</a>
+                <a href="walkthrough.html" class="text-gray-400 hover:text-abyss-accent transition-colors">WALKTHROUGH</a>
+                <a href="tips.html" class="text-gray-400 hover:text-abyss-accent transition-colors">TIPS</a>
+                <a href="mechanics.html" class="text-white hover:text-abyss-accent transition-colors">MECHANICS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-2xl font-bold text-white mb-4 glow-text">GAME MECHANICS</h1>
+            <p class="text-gray-400 text-xs max-w-xl mx-auto">
+                Understanding the systems that govern survival in the Abyss.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Energy System -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">THE ENERGY SYSTEM</h2>
+                    <p class="text-abyss-light text-xs">Your life force and survival resource</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-light text-xs mb-3">What is Energy?</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Energy is your life force. It determines how far and fast you can dash,
+                        your resistance to gravity wells, and your overall survivability.
+                        When energy reaches 0%, you fade into the abyss forever.
+                    </p>
+                </div>
+
+                <!-- Energy Stats -->
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-light text-xs mb-4">Energy at Various Levels</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-gray-400">100% Energy</span>
+                                <span class="text-green-400">Maximum</span>
+                            </div>
+                            <div class="h-4 bg-abyss-deep pixel-border">
+                                <div class="stat-bar h-full" style="width: 100%"></div>
+                            </div>
+                            <p class="text-gray-600 text-xs mt-1">Full dash distance, full speed, full gravity resistance</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-gray-400">75% Energy</span>
+                                <span class="text-yellow-400">Good</span>
+                            </div>
+                            <div class="h-4 bg-abyss-deep pixel-border">
+                                <div class="stat-bar h-full" style="width: 75%"></div>
+                            </div>
+                            <p class="text-gray-600 text-xs mt-1">Slightly reduced dash distance, 80% speed</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-gray-400">50% Energy</span>
+                                <span class="text-orange-400">Warning</span>
+                            </div>
+                            <div class="h-4 bg-abyss-deep pixel-border">
+                                <div class="stat-bar h-full" style="width: 50%"></div>
+                            </div>
+                            <p class="text-gray-600 text-xs mt-1">Half dash distance, 60% speed, affected by gravity wells</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-gray-400">25% Energy</span>
+                                <span class="text-red-400">Critical</span>
+                            </div>
+                            <div class="h-4 bg-abyss-deep pixel-border">
+                                <div class="stat-bar h-full" style="width: 25%"></div>
+                            </div>
+                            <p class="text-gray-600 text-xs mt-1">Short dashes only, 40% speed, float in gravity wells</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-gray-400">0% Energy</span>
+                                <span class="text-white">DEATH</span>
+                            </div>
+                            <div class="h-4 bg-abyss-deep pixel-border">
+                                <div class="bg-red-600 h-full" style="width: 0%"></div>
+                            </div>
+                            <p class="text-gray-600 text-xs mt-1">Permanent game over. No recovery possible.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Energy Drain Sources</h3>
+                        <ul class="text-gray-400 text-xs space-y-2">
+                            <li>• Death: Lose all energy and respawn at last checkpoint</li>
+                            <li>• Enemy contact: Drains 20-40% depending on enemy</li>
+                            <li>• Hazard damage: Drains 10-25% per hit</li>
+                            <li>• Water areas: Drains 1% per second standing</li>
+                            <li>• Gravity wells: Drains 2% per second at low energy</li>
+                            <li>• Light beams: Drains 5% per second</li>
+                        </ul>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Energy Restoration</h3>
+                        <ul class="text-gray-400 text-xs space-y-2">
+                            <li>• Small energy orb: +5%</li>
+                            <li>• Large energy orb: +20%</li>
+                            <li>• Enemy kill: +15%</li>
+                            <li>• Checkpoint proximity: +10% (once per checkpoint)</li>
+                            <li>• Secret area rewards: +25-40%</li>
+                            <li>• Final ascent: Slow regeneration active</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movement System -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">MOVEMENT SYSTEM</h2>
+                    <p class="text-abyss-light text-xs">How your character moves and interacts</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Walking & Running</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-2">
+                            Walking is free — no energy cost. Movement speed is constant.
+                        </p>
+                        <ul class="text-gray-500 text-xs space-y-1">
+                            <li>• Base speed: 100 units/second</li>
+                            <li>• No acceleration curve — instant full speed</li>
+                            <li>• Can change direction instantly</li>
+                        </ul>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Dashing</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-2">
+                            Your primary escape and travel mechanic. Costs energy.
+                        </p>
+                        <ul class="text-gray-500 text-xs space-y-1">
+                            <li>• Tap dash: Short burst, 3% energy</li>
+                            <li>• Hold dash: Full dash, 10% energy</li>
+                            <li>• 5 i-frames during dash</li>
+                            <li>• Cooldown: None</li>
+                            <li>• Can dash in 8 directions</li>
+                        </ul>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Jumping</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-2">
+                            Standard jump with variable height based on button hold.
+                        </p>
+                        <ul class="text-gray-500 text-xs space-y-1">
+                            <li>• Tap jump: Short hop</li>
+                            <li>• Hold jump: Full height</li>
+                            <li>• Wall jump: Available after Level 2</li>
+                            <li>• No double jump (initially)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Abilities Unlocked</h3>
+                        <ul class="text-gray-400 text-xs space-y-2">
+                            <li><span class="text-white">Wall Jump</span> — Level 2</li>
+                            <li><span class="text-white">Extended Dash</span> — Level 5</li>
+                            <li><span class="text-white">Gravity Anchor</span> — Level 9</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dash Mechanics Detail -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">DASH MECHANICS IN DEPTH</h2>
+                    <p class="text-abyss-light text-xs">Understanding dash behavior</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-light text-xs mb-3">Dash Distance Formula</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Actual dash distance = Base Distance x (Current Energy% / 100) x Speed Modifier
+                    </p>
+                    <div class="bg-abyss-deep/50 p-3 mt-3">
+                        <p class="text-gray-500 text-xs">
+                            At 100% energy: 100% distance<br>
+                            At 75% energy: 75% distance<br>
+                            At 50% energy: 50% distance<br>
+                            At 25% energy: 25% distance
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-light text-xs mb-3">Dash Speed Formula</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Dash speed is separate from distance. It affects how quickly you cross gaps.
+                    </p>
+                    <div class="bg-abyss-deep/50 p-3 mt-3">
+                        <p class="text-gray-500 text-xs">
+                            Above 60% energy: 100% dash speed<br>
+                            30-60% energy: 75% dash speed<br>
+                            Below 30% energy: 50% dash speed<br>
+                            0% energy: Cannot dash
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border">
+                    <h3 class="text-abyss-light text-xs mb-3">Invincibility Frames (i-Frames)</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Dashing grants 5 frames of invincibility at the start of the dash.
+                        This allows passing through hazards without damage/energy drain.
+                    </p>
+                    <div class="bg-abyss-deep/50 p-3 mt-3">
+                        <p class="text-gray-500 text-xs">
+                            Frame data: i-frames start at frame 1, end at frame 5<br>
+                            At 60fps: 5 frames = ~0.083 seconds<br>
+                            Timing dash to hit hazards at frame 1-5 avoids all damage
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gravity Wells -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">GRAVITY WELLS</h2>
+                    <p class="text-abyss-light text-xs">Level 8 mechanic - affects all movement</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-light text-xs mb-3">How Gravity Wells Work</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Gravity wells reverse or alter gravitational pull. Up becomes down,
+                        down becomes up, or gravity becomes neutral.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Gravity Resistance</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Your energy level determines how much you resist gravity effects.
+                        </p>
+                        <ul class="text-gray-500 text-xs space-y-1 mt-2">
+                            <li>• 75%+ energy: Full control</li>
+                            <li>• 50-75% energy: Slight drift</li>
+                            <li>• 25-50% energy: Significant drift</li>
+                            <li>• Below 25%: Float uncontrollably</li>
+                        </ul>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Gravity Anchor Ability</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Unlocked after defeating The Heart at Level 9.
+                        </p>
+                        <ul class="text-gray-500 text-xs space-y-1 mt-2">
+                            <li>• Hold to anchor in place</li>
+                            <li>• Costs 1% energy per second</li>
+                            <li>• Allows precise platforming in gravity wells</li>
+                            <li>• Essential for Level 8 and beyond</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Damage System -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">DAMAGE & DEATH</h2>
+                    <p class="text-abyss-light text-xs">What happens when you take damage</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-light text-xs mb-3">Damage Sources</h3>
+                    <div class="grid md:grid-cols-2 gap-4 mt-3">
+                        <div>
+                            <p class="text-gray-500 text-xs mb-2">Enemies:</p>
+                            <ul class="text-gray-400 text-xs space-y-1">
+                                <li>• Basic Guard: 20% energy drain</li>
+                                <li>• Undead Prisoner: 25% energy drain</li>
+                                <li>• The Warden: 40% energy drain</li>
+                                <li>• The Heart: 35% energy drain (contact)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-xs mb-2">Hazards:</p>
+                            <ul class="text-gray-400 text-xs space-y-1">
+                                <li>• Spikes: 15% energy drain</li>
+                                <li>• Light Beams: 5% per second</li>
+                                <li>• Water: 1% per second</li>
+                                <li>• Falling (long): 30% energy drain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border">
+                    <h3 class="text-abyss-light text-xs mb-3">Death & Respawn</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-2">
+                        When you die, you lose all current energy and respawn at your last activated checkpoint.
+                    </p>
+                    <ul class="text-gray-500 text-xs space-y-1">
+                        <li>• Death sets energy to 0%</li>
+                        <li>• Respawn at last checkpoint with 0% energy</li>
+                        <li>• Checkpoint restores 25% energy on activation</li>
+                        <li>• Standing near active checkpoint restores 10% (once per death)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="text-center py-8">
+                <a href="#" class="text-abyss-light text-xs hover:text-white transition-colors">
+                    Back to Top
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t-4 border-abyss-mid">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-abyss-light text-xs mb-4">ABYSSAL ESCAPE WIKI</p>
+            <p class="text-gray-600 text-xs">
+                A fan-made wiki for the game Abyssal Escape.
+            </p>
+            <p class="text-gray-700 text-xs mt-4">
+                This site is not affiliated with the game developers.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

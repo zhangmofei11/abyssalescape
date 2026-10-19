@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips & Tricks - Abyssal Escape Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: {
+                            deep: '#0a0612',
+                            purple: '#1a0a2e',
+                            mid: '#2d1b4e',
+                            glow: '#6b21a8',
+                            accent: '#a855f7',
+                            light: '#c084fc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: linear-gradient(180deg, #0a0612 0%, #1a0a2e 50%, #0a0612 100%);
+        }
+        .pixel-border {
+            box-shadow:
+                0 0 0 4px #1a0a2e,
+                0 0 0 8px #2d1b4e,
+                0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px #a855f7, 0 0 20px #6b21a8;
+        }
+        .pixel-art-bg {
+            background-image:
+                linear-gradient(rgba(107, 33, 168, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(107, 33, 168, 0.1) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen pixel-art-bg">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-abyss-deep/90 backdrop-blur-sm border-b-4 border-abyss-mid">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-abyss-light font-bold text-sm tracking-wider hover:text-white transition-colors">
+                ABYSSAL ESCAPE
+            </a>
+            <div class="flex gap-6 text-xs">
+                <a href="index.html" class="text-gray-400 hover:text-abyss-accent transition-colors">HOME</a>
+                <a href="walkthrough.html" class="text-gray-400 hover:text-abyss-accent transition-colors">WALKTHROUGH</a>
+                <a href="tips.html" class="text-white hover:text-abyss-accent transition-colors">TIPS</a>
+                <a href="mechanics.html" class="text-gray-400 hover:text-abyss-accent transition-colors">MECHANICS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-2xl font-bold text-white mb-4 glow-text">TIPS & TRICKS</h1>
+            <p class="text-gray-400 text-xs max-w-xl mx-auto">
+                Advanced strategies, hidden secrets, and expert techniques for escaping the Abyss.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Energy Conservation -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">ENERGY CONSERVATION</h2>
+                    <p class="text-abyss-light text-xs">Master your most precious resource</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Dash Only When Necessary</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Running is free. Dashing costs energy. In safe areas, always walk.
+                            Save dashes for danger zones and precision platforming.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Short Dashes Over Long</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Tapping dash gives 70% of the distance for 30% of the energy cost.
+                            Master the tap rhythm for maximum efficiency.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Abuse Invincibility Frames</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Dashing grants 5 frames of invincibility. Use this to pass through
+                            hazards without taking damage. Timing is everything.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Energy Orb Priorities</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Large orbs restore 20%, small orbs restore 5%. Always grab larges first.
+                            Small orbs in safe zones can wait.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combat Tips -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">COMBAT STRATEGIES</h2>
+                    <p class="text-abyss-light text-xs">When fighting is unavoidable</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">The Stagger Method</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            First hit staggers most enemies, second hit kills. Two-tap dash attack
+                            combo is faster and safer than trying to melee.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Environment Kills</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Lure enemies to spike traps or off ledges. This costs no energy and
+                            works on most regular enemies. The Warden is immune.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Escape Dash</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            If you're about to be hit, dash away. The i-frames will save you.
+                            A well-timed escape dash is better than tanking damage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Secrets -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">HIDDEN SECRETS</h2>
+                    <p class="text-abyss-light text-xs">Areas most players miss</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <h3 class="text-abyss-accent text-xs mb-3">Secret Areas by Level</h3>
+                    <ul class="text-gray-400 text-xs space-y-3">
+                        <li><span class="text-white">Level 2:</span> Wall jump off the left side of the second falling chamber to find a hidden energy cache.</li>
+                        <li><span class="text-white">Level 4:</span> Swim straight down at the end instead of going up — there's an underwater tunnel.</li>
+                        <li><span class="text-white">Level 6:</span> Stand in the center and don't move for 10 seconds. The echo reveal opens a secret door.</li>
+                        <li><span class="text-white">Level 8:</span> In the second gravity well, there's a false wall on the right that leads to 40% energy.</li>
+                        <li><span class="text-white">Level 11:</span> In the third light beam section, there's a shadow alcove that gives full energy restore.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Speedrun Tips -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">SPEEDRUN TECHNIQUES</h2>
+                    <p class="text-abyss-light text-xs">For the fastest escapes</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Corner Boost</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Dashing into a corner at the right angle launches you faster than normal dash.
+                            The boost depends on angle — 45 degrees is optimal.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Extended Dash</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Start dash at the peak of a jump. The dash extends your air time
+                            while maintaining speed. Useful for crossing large gaps efficiently.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Momentum Preservation</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Don't dash perpendicular to your movement. Dash in the same direction
+                            to maintain momentum. Perpendicular dashes kill your speed.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Frame-Perfect Gravity Cancel</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Enter a gravity well during a dash. If timed perfectly, you keep
+                            horizontal momentum. Very difficult but saves seconds in speedruns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Advice -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">GENERAL ADVICE</h2>
+                    <p class="text-abyss-light text-xs">Things that make the journey easier</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Death is Not Punishment</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Death costs energy, but respawning at checkpoints gives you another
+                            chance to optimize your route. Don't fear death — learn from it.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Checkpoints Are Sacred</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Always activate checkpoints before attempting difficult sections.
+                            They're marked by glowing crystals. Standing near them restores 10% energy.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Study Enemy Patterns</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Every enemy has a pattern. Watch for 2-3 cycles to learn it before
+                            engaging. Patterns don't change — they just get faster in harder areas.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Energy at 0% = Game Over</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            This is the only true fail state. Even touching enemies deals energy drain,
+                            not instant death. Keep even 1% energy and you can still recover.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="text-center py-8">
+                <a href="#" class="text-abyss-light text-xs hover:text-white transition-colors">
+                    Back to Top
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t-4 border-abyss-mid">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-abyss-light text-xs mb-4">ABYSSAL ESCAPE WIKI</p>
+            <p class="text-gray-600 text-xs">
+                A fan-made wiki for the game Abyssal Escape.
+            </p>
+            <p class="text-gray-700 text-xs mt-4">
+                This site is not affiliated with the game developers.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

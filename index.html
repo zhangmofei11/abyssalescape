@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssal Escape - A Pixel Metroidvania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: {
+                            deep: '#0a0612',
+                            purple: '#1a0a2e',
+                            mid: '#2d1b4e',
+                            glow: '#6b21a8',
+                            accent: '#a855f7',
+                            light: '#c084fc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: linear-gradient(180deg, #0a0612 0%, #1a0a2e 50%, #0a0612 100%);
+        }
+        .pixel-border {
+            box-shadow:
+                0 0 0 4px #1a0a2e,
+                0 0 0 8px #2d1b4e,
+                0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px #a855f7, 0 0 20px #6b21a8;
+        }
+        .pixel-art-bg {
+            background-image:
+                linear-gradient(rgba(107, 33, 168, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(107, 33, 168, 0.1) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .hero-glow {
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen pixel-art-bg">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-abyss-deep/90 backdrop-blur-sm border-b-4 border-abyss-mid">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-abyss-light font-bold text-sm tracking-wider hover:text-white transition-colors">
+                ABYSSAL ESCAPE
+            </a>
+            <div class="flex gap-6 text-xs">
+                <a href="index.html" class="text-white hover:text-abyss-accent transition-colors">HOME</a>
+                <a href="walkthrough.html" class="text-gray-400 hover:text-abyss-accent transition-colors">WALKTHROUGH</a>
+                <a href="tips.html" class="text-gray-400 hover:text-abyss-accent transition-colors">TIPS</a>
+                <a href="mechanics.html" class="text-gray-400 hover:text-abyss-accent transition-colors">MECHANICS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="hero-glow inline-block mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-lg pixel-border bg-gradient-to-br from-abyss-purple to-abyss-deep flex items-center justify-center">
+                    <div class="text-6xl">🕳️</div>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 glow-text tracking-wider">
+                ABYSSAL ESCAPE
+            </h1>
+            <p class="text-abyss-light text-sm mb-2">A Pixel Metroidvania</p>
+            <p class="text-gray-500 text-xs max-w-xl mx-auto leading-relaxed mt-6">
+                Escape the endless abyss prison. Explore deep underground caverns.
+                Master your energy. Die. Rise. Repeat.
+            </p>
+            <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                <a href="walkthrough.html" class="px-6 py-3 bg-abyss-glow hover:bg-abyss-accent text-white text-xs transition-all pixel-border">
+                    START GUIDE
+                </a>
+                <a href="mechanics.html" class="px-6 py-3 border-2 border-abyss-mid hover:border-abyss-accent text-abyss-light text-xs transition-all">
+                    LEARN MECHANICS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Game Features -->
+    <section class="py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-center text-lg text-white mb-12 tracking-wider">GAME FEATURES</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-abyss-purple/50 p-6 pixel-border">
+                    <div class="text-3xl mb-4">⚔️</div>
+                    <h3 class="text-abyss-light text-xs mb-2">METROIDVANIA</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Linear progression with backtracking. Unlock new abilities to reach previously inaccessible areas.
+                    </p>
+                </div>
+                <div class="bg-abyss-purple/50 p-6 pixel-border">
+                    <div class="text-3xl mb-4">💀</div>
+                    <h3 class="text-abyss-light text-xs mb-2">ENERGY SYSTEM</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Death costs energy. Your dash distance and speed depend on remaining energy reserves.
+                    </p>
+                </div>
+                <div class="bg-abyss-purple/50 p-6 pixel-border">
+                    <div class="text-3xl mb-4">🎨</div>
+                    <h3 class="text-abyss-light text-xs mb-2">PIXEL ART</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Beautiful 16-bit pixel art style with atmospheric lighting and particle effects.
+                    </p>
+                </div>
+                <div class="bg-abyss-purple/50 p-6 pixel-border">
+                    <div class="text-3xl mb-4">🗺️</div>
+                    <h3 class="text-abyss-light text-xs mb-2">EXPLORATION</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Deep underground caverns, hidden secrets, and mysterious artifacts await discovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Overview -->
+    <section class="py-16 px-4 bg-abyss-deep/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-center text-lg text-white mb-12 tracking-wider">ABOUT THE GAME</h2>
+            <div class="bg-abyss-purple/30 p-8 pixel-border">
+                <p class="text-gray-300 text-xs leading-loose mb-4">
+                    You are a prisoner deep within the Abyss, an ancient underground prison that has held souls for millennia.
+                    The only way out is down — through forgotten tunnels, deadly traps, and the remnants of those who tried before you.
+                </p>
+                <p class="text-gray-400 text-xs leading-loose">
+                    Every death drains your life energy. Run out completely, and you fade into the darkness forever.
+                    Conserve your energy, dash wisely, and find your way to the surface.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-center text-lg text-white mb-8 tracking-wider">EXPLORE THE WIKI</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="walkthrough.html" class="block p-6 bg-abyss-mid hover:bg-abyss-glow/30 transition-all pixel-border group">
+                    <div class="text-2xl mb-3 group-hover:scale-110 transition-transform">📜</div>
+                    <h3 class="text-white text-xs mb-2">WALKTHROUGH</h3>
+                    <p class="text-gray-500 text-xs">Complete guide with level-by-level tips</p>
+                </a>
+                <a href="tips.html" class="block p-6 bg-abyss-mid hover:bg-abyss-glow/30 transition-all pixel-border group">
+                    <div class="text-2xl mb-3 group-hover:scale-110 transition-transform">💡</div>
+                    <h3 class="text-white text-xs mb-2">TIPS & TRICKS</h3>
+                    <p class="text-gray-500 text-xs">Advanced strategies and hidden secrets</p>
+                </a>
+                <a href="mechanics.html" class="block p-6 bg-abyss-mid hover:bg-abyss-glow/30 transition-all pixel-border group">
+                    <div class="text-2xl mb-3 group-hover:scale-110 transition-transform">⚙️</div>
+                    <h3 class="text-white text-xs mb-2">MECHANICS</h3>
+                    <p class="text-gray-500 text-xs">Energy system and movement details</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t-4 border-abyss-mid">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-abyss-light text-xs mb-4">ABYSSAL ESCAPE WIKI</p>
+            <p class="text-gray-600 text-xs">
+                A fan-made wiki for the game Abyssal Escape.
+            </p>
+            <p class="text-gray-700 text-xs mt-4">
+                This site is not affiliated with the game developers.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthrough - Abyssal Escape Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: {
+                            deep: '#0a0612',
+                            purple: '#1a0a2e',
+                            mid: '#2d1b4e',
+                            glow: '#6b21a8',
+                            accent: '#a855f7',
+                            light: '#c084fc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: linear-gradient(180deg, #0a0612 0%, #1a0a2e 50%, #0a0612 100%);
+        }
+        .pixel-border {
+            box-shadow:
+                0 0 0 4px #1a0a2e,
+                0 0 0 8px #2d1b4e,
+                0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px #a855f7, 0 0 20px #6b21a8;
+        }
+        .pixel-art-bg {
+            background-image:
+                linear-gradient(rgba(107, 33, 168, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(107, 33, 168, 0.1) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen pixel-art-bg">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-abyss-deep/90 backdrop-blur-sm border-b-4 border-abyss-mid">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-abyss-light font-bold text-sm tracking-wider hover:text-white transition-colors">
+                ABYSSAL ESCAPE
+            </a>
+            <div class="flex gap-6 text-xs">
+                <a href="index.html" class="text-gray-400 hover:text-abyss-accent transition-colors">HOME</a>
+                <a href="walkthrough.html" class="text-white hover:text-abyss-accent transition-colors">WALKTHROUGH</a>
+                <a href="tips.html" class="text-gray-400 hover:text-abyss-accent transition-colors">TIPS</a>
+                <a href="mechanics.html" class="text-gray-400 hover:text-abyss-accent transition-colors">MECHANICS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-2xl font-bold text-white mb-4 glow-text">WALKTHROUGH</h1>
+            <p class="text-gray-400 text-xs max-w-xl mx-auto">
+                Complete guide to escaping the Abyss. Level-by-level tips and strategies.
+            </p>
+        </div>
+    </header>
+
+    <!-- Walkthrough Content -->
+    <main class="py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Table of Contents -->
+            <div class="bg-abyss-purple/50 p-6 pixel-border mb-8">
+                <h2 class="text-abyss-light text-xs mb-4">TABLE OF CONTENTS</h2>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#level1" class="text-gray-400 hover:text-white transition-colors">1. The Depths (Level 1-3)</a></li>
+                    <li><a href="#level2" class="text-gray-400 hover:text-white transition-colors">2. Forgotten Tunnels (Level 4-6)</a></li>
+                    <li><a href="#level3" class="text-gray-400 hover:text-white transition-colors">3. The Abyssal Core (Level 7-9)</a></li>
+                    <li><a href="#level4" class="text-gray-400 hover:text-white transition-colors">4. Surface Approach (Level 10-12)</a></li>
+                    <li><a href="#final" class="text-gray-400 hover:text-white transition-colors">5. Final Escape</a></li>
+                </ul>
+            </div>
+
+            <!-- Level 1 -->
+            <div id="level1" class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-4">
+                    <h2 class="text-white text-sm mb-2">THE DEPTHS (Level 1-3)</h2>
+                    <p class="text-abyss-light text-xs">Starting Area - Learn the Basics</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 1: Awakening</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            You wake up in a dark cell. The basics of movement are all you have.
+                            Focus on learning how to dash — this is your primary escape tool.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Start with short dashes to conserve energy</li>
+                                <li>• Collect all energy orbs — they restore your reserves</li>
+                                <li>• Watch for the pattern in guard patrols</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 2: First Falls</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Vertical platforming begins. You'll need to fall through platforms strategically
+                            while avoiding spike traps below.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Some platforms break after you stand on them</li>
+                                <li>• Save energy for emergency dashes upward</li>
+                                <li>• The third falling section has a hidden alcove with bonus energy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 3: The Guard Post</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Your first real enemy encounter. Guards patrol fixed routes.
+                            Defeating them is optional but they drop energy on death.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Guards have a wind-up animation before attacking</li>
+                                <li>• Running past is often safer than fighting</li>
+                                <li>• Two hits from a guard will drain significant energy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 2 -->
+            <div id="level2" class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-4">
+                    <h2 class="text-white text-sm mb-2">FORGOTTEN TUNNELS (Level 4-6)</h2>
+                    <p class="text-abyss-light text-xs">Mid-Game - New Mechanics Introduced</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 4: Flooded Passages</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Water sections slow your movement and increase energy drain.
+                            Dash becomes critical for crossing large gaps quickly.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Water drains energy slowly while standing in it</li>
+                                <li>• Quick dash bursts minimize water exposure</li>
+                                <li>• Air pockets allow you to recover breath and energy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 5: The Mining Shafts</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Crumbling platforms and narrow passages. One wrong step means a long fall
+                            and heavy energy loss on respawn.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Check stability by throwing debris before crossing</li>
+                                <li>• Save a full energy bar for the minecart escape sequence</li>
+                                <li>• Mineral deposits can be collected for bonus energy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 6: Echo Chambers</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Sound-based puzzles. Certain actions trigger traps or open paths.
+                            The echoes reveal hidden routes.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Light footsteps on metal grates avoid triggering sensors</li>
+                                <li>• A well-timed dash creates an echo that reveals secret doors</li>
+                                <li>• Avoid areas where your echo returns too quickly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 3 -->
+            <div id="level3" class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-4">
+                    <h2 class="text-white text-sm mb-2">THE ABYSSAL CORE (Level 7-9)</h2>
+                    <p class="text-abyss-light text-xs">Late-Game - High Challenge</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 7: The Prison Ward</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Other prisoners wander as undead. They're aggressive but predictable.
+                            This area has high energy orb rewards for skilled players.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Undead have no energy themselves — they drain yours on contact</li>
+                                <li>• Killing them yields 15% energy each</li>
+                                <li>• The Warden at level's end drops 50% energy but is very dangerous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 8: Gravity Wells</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Gravity reversal zones change your movement entirely.
+                            Up becomes down. Dash behaves differently in each zone.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Gravity shifts happen without warning — be prepared</li>
+                                <li>• High energy = stronger gravity resistance</li>
+                                <li>• Zero energy means you float helplessly in gravity wells</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 9: The Heart</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Mid-boss area. The Heart is a massive creature that fills most of the room.
+                            It's slow but its attacks cover the entire floor.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Stick to the walls and dash in arcs around it</li>
+                                <li>• Attacks come in 3-hit cycles with safe windows between</li>
+                                <li>• Victory yields the Gravity Anchor ability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level 4 -->
+            <div id="level4" class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-4">
+                    <h2 class="text-white text-sm mb-2">SURFACE APPROACH (Level 10-12)</h2>
+                    <p class="text-abyss-light text-xs">Final Stretch - Almost Free</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 10: The Ascent</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Mostly vertical platforming upward. Your first view of distant light.
+                            Platform stability becomes critical.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Light areas mean safer platforms</li>
+                                <li>• Falling here costs massive energy — be careful</li>
+                                <li>• Checkpoint midway — use it</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 11: Light Tunnels</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Sunlight filters through cracks. The atmosphere changes — hope returns.
+                            But the path is narrower than ever.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Light beams damage you if you stay in them too long</li>
+                                <li>• Shadows are safe zones and often contain energy</li>
+                                <li>• Near the end, a hidden path leads to a full energy restore</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Level 12: The Gate</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            The exit is here but heavily guarded. The final test of everything you've learned.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3">
+                            <p class="text-abyss-accent text-xs font-bold mb-2">Tips:</p>
+                            <ul class="text-gray-500 text-xs space-y-1">
+                                <li>• Two guards patrol — use their patterns to slip past</li>
+                                <li>• If fighting, use the environment to separate them</li>
+                                <li>• The gate requires no key — just reach it</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final -->
+            <div id="final" class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-4">
+                    <h2 class="text-white text-sm mb-2">FINAL ESCAPE</h2>
+                    <p class="text-abyss-light text-xs">Freedom Awaits</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border">
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                        Beyond the gate is a long stairway upward. No enemies, no traps.
+                        Just climb. The light grows with each step.
+                    </p>
+                    <div class="bg-abyss-deep/50 p-3">
+                        <p class="text-abyss-accent text-xs font-bold mb-2">Final Tips:</p>
+                        <ul class="text-gray-500 text-xs space-y-1">
+                            <li>• Energy regeneration is active here — climb at your pace</li>
+                            <li>• The ending triggers when you reach the top</li>
+                            <li>• Your final energy level affects the ending cutscene</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="text-center py-8">
+                <a href="#" class="text-abyss-light text-xs hover:text-white transition-colors">
+                    Back to Top
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t-4 border-abyss-mid">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-abyss-light text-xs mb-4">ABYSSAL ESCAPE WIKI</p>
+            <p class="text-gray-600 text-xs">
+                A fan-made wiki for the game Abyssal Escape.
+            </p>
+            <p class="text-gray-700 text-xs mt-4">
+                This site is not affiliated with the game developers.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
