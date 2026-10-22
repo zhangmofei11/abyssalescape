@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssal Escape Beginner Guide - How to Start Your Escape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: {
+                            deep: '#0a0612',
+                            purple: '#1a0a2e',
+                            mid: '#2d1b4e',
+                            glow: '#6b21a8',
+                            accent: '#a855f7',
+                            light: '#c084fc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW8FK95TFX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EW8FK95TFX');
+    </script>
+    <meta name="description" content="New to Abyssal Escape? This beginner guide explains dashing, energy, checkpoints, your first bosses, and how to progress without dying constantly.">
+    <meta name="keywords" content="Abyssal Escape beginner guide, Abyssal Escape how to play, metroidvania beginners, Abyssal Escape energy tips, first boss Drowned Sentinel, Abyssal Escape progression">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: linear-gradient(180deg, #0a0612 0%, #1a0a2e 50%, #0a0612 100%);
+        }
+        .pixel-border {
+            box-shadow:
+                0 0 0 4px #1a0a2e,
+                0 0 0 8px #2d1b4e,
+                0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px #a855f7, 0 0 20px #6b21a8;
+        }
+        .pixel-art-bg {
+            background-image:
+                linear-gradient(rgba(107, 33, 168, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(107, 33, 168, 0.1) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+    </style>
+
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://abyssalescape.world/#website",
+          "name": "Abyssal Escape",
+          "url": "https://abyssalescape.world/",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://abyssalescape.world/beginner-guide.html#webpage",
+          "url": "https://abyssalescape.world/beginner-guide.html",
+          "name": "Abyssal Escape Beginner Guide - How to Start Your Escape",
+          "description": "New to Abyssal Escape? This beginner guide explains dashing, energy, checkpoints, your first bosses, and how to progress without dying constantly.",
+          "isPartOf": {
+            "@id": "https://abyssalescape.world/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://abyssalescape.world/beginner-guide.html#breadcrumb"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://abyssalescape.world/beginner-guide.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abyssalescape.world/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Abyssal Escape Beginner Guide - How to Start Your Escape"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-gray-200 min-h-screen pixel-art-bg">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-abyss-deep/90 backdrop-blur-sm border-b-4 border-abyss-mid">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-abyss-light font-bold text-sm tracking-wider hover:text-white transition-colors">
+                ABYSSAL ESCAPE
+            </a>
+            <div class="flex gap-6 text-xs">
+                <a href="index.html" class="text-gray-400 hover:text-abyss-accent transition-colors">HOME</a>
+                <a href="walkthrough.html" class="text-gray-400 hover:text-abyss-accent transition-colors">WALKTHROUGH</a>
+                <a href="tips.html" class="text-gray-400 hover:text-abyss-accent transition-colors">TIPS</a>
+                <a href="mechanics.html" class="text-gray-400 hover:text-abyss-accent transition-colors">MECHANICS</a>
+                <a href="pro-tips.html" class="text-gray-400 hover:text-abyss-accent transition-colors">PRO TIPS</a>
+                <a href="beginner-guide.html" class="text-white hover:text-abyss-accent transition-colors">BEGINNER</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-2xl font-bold text-white mb-4 glow-text">BEGINNER GUIDE</h1>
+            <p class="text-gray-400 text-xs max-w-xl mx-auto leading-relaxed">
+                How to survive your first hours in the Abyss, in the order you actually need it.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Understanding energy -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">UNDERSTAND ENERGY FIRST</h2>
+                    <p class="text-abyss-light text-xs">The one rule that governs everything</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                        Abyssal Escape does not use health. It uses energy, and energy does two jobs:
+                        it is your life bar and it is your fuel. When it hits 0% your run is over.
+                        That single idea changes how you play, because dashing, which feels like a
+                        basic movement, is actually a resource decision.
+                    </p>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Here is the priority order that keeps you alive without thinking too hard:
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">1. Walk by Default</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Walking costs nothing. Movement speed is constant at 100 units per second.
+                            If there is no gap, no hazard and no enemy, walk.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">2. Tap the Dash</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            A tapped dash costs 3% and covers about 70% of a full dash. Learn the tap
+                            first and use holds only when a gap genuinely requires them.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">3. Watch the Bar, Not the Screen</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Below 50% energy your dash distance halves and your speed drops to 60%.
+                            Glance at the bar before committing to a jump, not after you land short.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">4. Bank Before New Ground</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Enter every new area with a full bar. Small orbs give 5%, large ones 20%
+                            and enemy kills 15%, so topping up is quick if you look for it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your first hour -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">YOUR FIRST HOUR</h2>
+                    <p class="text-abyss-light text-xs">A steady route through the first areas</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Step 1: Learn the Dash (Level 1)</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            You wake in a dark cell with movement only. Dash at least a dozen times
+                            before you leave. The game never explains the cost in a tutorial, so
+                            build the habit early: tap for most things.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3 overflow-x-auto">
+                            <table class="w-full text-xs">
+                                <tr class="text-abyss-accent"><td class="py-1 pr-4">Goal</td><td class="py-1">Reach the first checkpoint</td></tr>
+                                <tr class="text-gray-500"><td class="py-1 pr-4">Collect</td><td class="py-1">Every energy orb in the cell</td></tr>
+                                <tr class="text-gray-500"><td class="py-1 pr-4">Mistake</td><td class="py-1">Holding dash out of habit</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Step 2: Fall on Purpose (Level 2)</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            The falling chambers have platforms that crumble under you. This level
+                            teaches you to descend on your terms, and it ends with Wall Jump, the
+                            first real ability and the one that opens most of the early secrets.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3 overflow-x-auto">
+                            <table class="w-full text-xs">
+                                <tr class="text-abyss-accent"><td class="py-1 pr-4">Goal</td><td class="py-1">Descend the falling chambers</td></tr>
+                                <tr class="text-gray-500"><td class="py-1 pr-4">Collect</td><td class="py-1">Wall Jump, and the Level 2 energy cache</td></tr>
+                                <tr class="text-gray-500"><td class="py-1 pr-4">Mistake</td><td class="py-1">Standing on a crumbling platform too long</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-2">Step 3: Learn to Pass (Level 3)</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                            Guards patrol fixed routes and wind up before they attack. You do not have
+                            to fight anything in the Abyss to survive it. Watch two patrol loops, find
+                            the gap, and slip through. Come back later if you need the energy.
+                        </p>
+                        <div class="bg-abyss-deep/50 p-3 overflow-x-auto">
+                            <table class="w-full text-xs">
+                                <tr class="text-abyss-accent"><td class="py-1 pr-4">Goal</td><td class="py-1">Reach the far door past the patrols</td></tr>
+                                <tr class="text-gray-500"><td class="py-1 pr-4">Collect</td><td class="py-1">Energy from guards, optional</td></tr>
+                                <tr class="text-gray-500"><td class="py-1 pr-4">Mistake</td><td class="py-1">Fighting every guard you meet</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your first boss -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">YOUR FIRST BOSS</h2>
+                    <p class="text-abyss-light text-xs">The Drowned Sentinel, Level 4</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border mb-4">
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                        The Drowned Sentinel is the first real test and the most forgiving boss in the
+                        game. Its lunge is always preceded by a lantern flash. That flash is your
+                        cue: dash sideways, let it commit, then hit it while it recovers.
+                    </p>
+                    <ul class="text-gray-500 text-xs space-y-2">
+                        <li>• Enter with a full bar. A failed attempt costs 20% and a second one can end the run.</li>
+                        <li>• Dash on the lantern flash, not on the lunge itself. The telegraph gives you the frame.</li>
+                        <li>• Standing in flood water drains 1% per second, so fight near the dry ledge if you can.</li>
+                        <li>• Its reward is a large orb worth 20% plus the next checkpoint.</li>
+                    </ul>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border">
+                    <h3 class="text-abyss-light text-xs mb-3">If You Cannot Get Past It</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Return to Level 3 and clear the patrols. Each guard kill is worth 15%,
+                        enough to enter the boss room at full energy every time. There is no timer
+                        on this fight, so there is no reason to rush it.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Checkpoints -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">CHECKPOINT HABITS</h2>
+                    <p class="text-abyss-light text-xs">The most important habit in the game</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border">
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">
+                        When you die you lose all energy and respawn at your last activated checkpoint
+                        with 0% energy. That sounds harmless, but it means a checkpoint is your
+                        restart button and your health pack at the same time. Activating one restores
+                        25% immediately, and standing near an active one restores another 10% after a
+                        death.
+                    </p>
+                    <ul class="text-gray-500 text-xs space-y-2">
+                        <li>• Touch every checkpoint you pass. There is no cost to activating one.</li>
+                        <li>• After a death, respawn and immediately walk back to the checkpoint for the 10%.</li>
+                        <li>• If a section keeps killing you at low energy, it is usually a checkpoint problem, not a skill problem.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Progression -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">PROGRESSION MILESTONES</h2>
+                    <p class="text-abyss-light text-xs">What to aim for and when</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border overflow-x-auto">
+                    <table class="w-full text-xs min-w-[600px]">
+                        <thead>
+                            <tr class="text-abyss-light text-left">
+                                <th class="py-2 pr-4">Milestone</th>
+                                <th class="py-2 pr-4">Where</th>
+                                <th class="py-2">What You Unlock</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-400">
+                            <tr class="border-t border-abyss-mid align-top">
+                                <td class="py-3 pr-4 text-white">First ability</td>
+                                <td class="py-3 pr-4">Level 2</td>
+                                <td class="py-3 pr-4">Wall Jump for vertical shafts and the first secret cache</td>
+                            </tr>
+                            <tr class="border-t border-abyss-mid align-top">
+                                <td class="py-3 pr-4 text-white">First boss</td>
+                                <td class="py-3 pr-4">Level 4</td>
+                                <td class="py-3 pr-4">Large orb and the flooded passage checkpoint</td>
+                            </tr>
+                            <tr class="border-t border-abyss-mid align-top">
+                                <td class="py-3 pr-4 text-white">Second ability</td>
+                                <td class="py-3 pr-4">Level 5</td>
+                                <td class="py-3 pr-4">Extended Dash for the long shaft gaps</td>
+                            </tr>
+                            <tr class="border-t border-abyss-mid align-top">
+                                <td class="py-3 pr-4 text-white">Mid-game wall</td>
+                                <td class="py-3 pr-4">Level 7</td>
+                                <td class="py-3 pr-4">The Warden, plus 50% energy behind it</td>
+                            </tr>
+                            <tr class="border-t border-abyss-mid align-top">
+                                <td class="py-3 pr-4 text-white">Third ability</td>
+                                <td class="py-3 pr-4">Level 9</td>
+                                <td class="py-3 pr-4">Gravity Anchor, which makes the Level 8 wells controllable</td>
+                            </tr>
+                            <tr class="border-t border-abyss-mid align-top">
+                                <td class="py-3 pr-4 text-white">Exit</td>
+                                <td class="py-3 pr-4">Level 12</td>
+                                <td class="py-3 pr-4">The gate, the final orb set, and the ending</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common beginner mistakes -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">MISTAKES TO STOP MAKING</h2>
+                    <p class="text-abyss-light text-xs">Fix these and the game gets much easier</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Holding the Dash Button</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            A held dash burns 10% every burst. Tapping covers the same jump for 3%.
+                            This single habit is most of your energy bill.
+                        </p>
+                    </div>
+                    <div class="bg-abyss-purple/30 p-4 pixel-border">
+                        <h3 class="text-abyss-light text-xs mb-3">Fighting at Low Energy</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            A fight you enter at 30% is a fight you cannot finish. Retreat to a
+                            checkpoint, refill, and try again. There is no score penalty for that.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next steps -->
+            <div class="mb-12">
+                <div class="bg-abyss-mid p-6 pixel-border mb-6">
+                    <h2 class="text-white text-sm mb-2">WHERE TO GO NEXT</h2>
+                    <p class="text-abyss-light text-xs">More depth once the basics are set</p>
+                </div>
+                <div class="bg-abyss-purple/30 p-4 pixel-border">
+                    <ul class="text-gray-400 text-xs space-y-3">
+                        <li><span class="text-white">Walkthrough:</span> the full level-by-level route from the Depths to the Gate.</li>
+                        <li><span class="text-white">Mechanics:</span> exact energy values, dash formulas and what each unlock changes.</li>
+                        <li><span class="text-white">Tips:</span> hidden room locations, boss techniques and costly mistakes.</li>
+                        <li><span class="text-white">Pro Tips:</span> i-frame mastery, orb farming loops and speedrun ordering.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="text-center py-8">
+                <a href="#" class="text-abyss-light text-xs hover:text-white transition-colors">
+                    Back to Top
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Adsterra Ads -->
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/fc3d5138121cbeccb4026cde770ae6af"></script>
+    <div id="container-fc3d5138121cbeccb4026cde770ae6af"></div>
+
+    <script data-cfasync="false" src="https://bauval.org/14/310c9b853b42589cde600237d3d675c9"></script>
+
+    <script>
+      atOptions = {
+        'key' : 'c6ac884a82c57682bb328d225ceb9080',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/c6ac884a82c57682bb328d225ceb9080"></script>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t-4 border-abyss-mid">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-abyss-light text-xs mb-4">ABYSSAL ESCAPE WIKI</p>
+            <p class="text-gray-600 text-xs">
+                A fan-made wiki for the game Abyssal Escape.
+            </p>
+            <p class="text-gray-700 text-xs mt-4">
+                This site is not affiliated with the game developers.
+            </p>
+        </div>
+
+    <!-- Related Articles -->
+    <section class="max-w-4xl mx-auto py-8 px-4 border-t border-abyss-mid">
+        <h3 class="text-xl font-bold mb-4 text-white">You Might Also Like</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+        <a href="pro-tips.html" class="block p-4 bg-abyss-purple border-abyss-mid rounded hover:bg-abyss-glow transition">
+            <span class="font-semibold text-gray-300">→ Pro Tips - Abyssal Escape Wiki</span>
+        </a>
+        <a href="index.html" class="block p-4 bg-abyss-purple border-abyss-mid rounded hover:bg-abyss-glow transition">
+            <span class="font-semibold text-gray-300">→ Abyssal Escape - A Pixel Metroidvania</span>
+        </a>
+        <a href="mechanics.html" class="block p-4 bg-abyss-purple border-abyss-mid rounded hover:bg-abyss-glow transition">
+            <span class="font-semibold text-gray-300">→ Mechanics - Abyssal Escape Wiki</span>
+        </a>
+        <a href="walkthrough.html" class="block p-4 bg-abyss-purple border-abyss-mid rounded hover:bg-abyss-glow transition">
+            <span class="font-semibold text-gray-300">→ Walkthrough - Abyssal Escape Wiki</span>
+        </a>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
